@@ -38,7 +38,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_ROOT/lib64
 wget http://repo.continuum.io/archive/Anaconda2-4.1.1-Linux-x86_64.sh
 bash Anaconda2-4.1.1-Linux-x86_64.sh -b -p /mnt/bin/anaconda2
 rm Anaconda2-4.1.1-Linux-x86_64.sh
-echo 'export PATH="/mnt/bin/anaconda3/bin:$PATH"' >> ~/.bashrc
+echo 'export PATH="/mnt/bin/anaconda2/bin:$PATH"' >> ~/.bashrc
 
 # install tensorflow
 export TF_BINARY_URL='https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.10.0rc0-cp27-none-linux_x86_64.whl'
