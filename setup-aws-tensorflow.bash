@@ -18,8 +18,8 @@ sudo apt-get update
 sudo apt-get install -y cuda-7-5
 
 # get cudnn
-CUDNN_FILE=cudnn-7.0-linux-x64-v4.0-prod.tgz
-wget http://developer.download.nvidia.com/compute/redist/cudnn/v4/${CUDNN_FILE}
+CUDNN_FILE=cudnn-7.5-linux-x64-v5.1.tgz
+wget http://developer.download.nvidia.com/compute/redist/cudnn/v5.1/${CUDNN_FILE}
 tar xvzf ${CUDNN_FILE}
 rm ${CUDNN_FILE}
 sudo cp cuda/include/cudnn.h /usr/local/cuda/include # move library files to /usr/local/cuda
