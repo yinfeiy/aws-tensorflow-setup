@@ -11,14 +11,15 @@ sudo apt-get update && sudo apt-get -y upgrade
 sudo apt-get -y install linux-headers-$(uname -r) linux-image-extra-`uname -r`
 
 # install cuda
-wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/cuda-repo-ubuntu1404_7.5-18_amd64.deb
-sudo dpkg -i cuda-repo-ubuntu1404_7.5-18_amd64.deb
-rm cuda-repo-ubuntu1404_7.5-18_amd64.deb
+CUDA_FILE=cuda-repo-ubuntu1404_8.0.44-1_amd64.deb
+wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/${CUDA_FILE}
+sudo dpkg -i ${CUDA_FILE}
+rm ${CUDA_FILE}
 sudo apt-get update
-sudo apt-get install -y cuda-7-5
+sudo apt-get install -y cuda-8-0
 
 # get cudnn
-CUDNN_FILE=cudnn-7.5-linux-x64-v5.1.tgz
+CUDNN_FILE=cudnn-8.0-linux-x64-v5.1.tgz
 wget http://developer.download.nvidia.com/compute/redist/cudnn/v5.1/${CUDNN_FILE}
 tar xvzf ${CUDNN_FILE}
 rm ${CUDNN_FILE}
@@ -41,7 +42,11 @@ rm Anaconda2-4.1.1-Linux-x86_64.sh
 echo 'export PATH="/mnt/bin/anaconda2/bin:$PATH"' >> ~/.bashrc
 
 # install tensorflow
-export TF_BINARY_URL='https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.11.0rc0-cp27-none-linux_x86_64.whl'
+## GPU
+export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-0.12.0-cp27-none-linux_x86_64.whl
+## CPU
+#export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.12.0-cp27-none-linux_x86_64.whl
+
 
 /mnt/bin/anaconda2/bin/pip install $TF_BINARY_URL
 
