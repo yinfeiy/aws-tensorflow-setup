@@ -1,4 +1,4 @@
-# Setting up TensorFlow 1.1 with Python 2.7 on AWS GPU-instance
+# Setting up TensorFlow 0.12.1 with Python 2.7 on AWS GPU-instance
 
 ## Description
 
