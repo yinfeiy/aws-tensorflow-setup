@@ -2,13 +2,13 @@
 
 ## Description
 
-`setup-aws-tensorflow.bash` installs the following things on the ec2 `g2.8xlarge` instance running Ubuntu 14.04:
+`setup-aws-tensorflow.bash` installs the following things on the ec2 `g2.[x]xlarge` instance running Ubuntu 14.04:
 
 - Required linux packages
-- CUDA 7.5
-- cuDNN v4
+- CUDA 8.0
+- cuDNN v5.1
 - Anaconda with Python 2.7
-- TensorFlow 1.1
+- TensorFlow 0.12.1
 - GPU usage tool `gpustat`
 
 It is based on the blog post: <http://max-likelihood.com/2016/06/18/aws-tensorflow-setup/>.
